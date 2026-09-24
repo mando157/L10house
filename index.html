@@ -19,8 +19,8 @@
     <link rel="icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/plugins/animated_haedlines.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style.responsive.css">
 
     <title>L10house</title>
 </head>
@@ -36,9 +36,11 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span>
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
@@ -79,9 +81,85 @@
     </nav>
 
     <!-- *    Header Section    * -->
+    <header id="Home">
+        <img src="./images/wavesOpacity.svg" alt="wavesOpacity">
+        <div class="container">
+            <div class="row">
+                <div class="part-1 col-12 col-md-6 col-lg-6">
+                    <h1>L10N House</h1>
+                    <p>will help you communicate your message</p>
+
+                    <div class="animated_headline">
+                        <h5 class="cd-headline clip is-full-width">
+                            <span class="cd-words-wrapper">
+                                <b class="is-visible">Professionaly.</b>
+                                <b>Eloquenty.</b>
+                                <b>Directly to your audience.</b>
+                            </span>
+                        </h5>
+                    </div>
+                    <div class="video d-flex gap-3 align-items-center">
+                        <a href="#Services">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                        <p class="fw-medium mb-0">Play Video</p>
+                    </div>
+                </div>
+                <div class="part-2 col-12 col-md-6 col-lg-6">
+                    <div class="image">
+                        <img src="./images/globe-png-39540.png" class="img-fluid" alt="globe">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="down">
+            <img src="./images/arrow-down.png" alt="arrow-down">
+            <img src="./images/arrow-down.png" alt="arrow-down">
+            <img src="./images/arrow-down.png" alt="arrow-down">
+        </div>
+    </header>
+
+    <!-- *    About Us Section    * -->
+    <section id="About" class="bg-body">
+        <div class="container">
+            <div class="title">
+                <h2>ABOUT US</h2>
+            </div>
+            <div class="row row-gap-4">
+                <div class="part-1 col-10 col-lg-5 mx-auto">
+                    <div class="image">
+                        <img src="./images/about.png" class="img-fluid rounded-3" alt="about">
+                    </div>
+                </div>
+                <div class="part-2 col-10 col-lg-7 mx-auto d-flex align-items-center">
+                    <p>
+                        Located in the heart of dynamic Egypt, <span class="fw-medium"><span class="mainColor">L10N</span> <span class="secondaryColor">House</span></span> is a fast-growing company fully equipped to
+                        fulfil
+                        your translation and localization requirements, whatever the size and scope of your project. Our
+                        personalized approach that reflects our passion and uncompromising commitment to every client
+                        has
+                        seen us enjoy constant and steady growth. We pride ourselves on our reputation for QUALITY,
+                        DEPENDABILITY, SPEED, and CONFIDENTIALITY – ensuring we deliver first-rate projects on time and
+                        on
+                        budget, every time. Our reputation is built on delivering reliable, accurate projects on time
+                        and on
+                        budget. Our 24/7 customer service allows us to solve your problems in real time with a fast
+                        turn-around. <span class="fw-medium"><span class="mainColor">L10N</span> <span class="secondaryColor">House</span></span> takes the stress out of the language translation and localization
+                        process by
+                        providing fast, high-quality service for every piece of communication you need translated – in
+                        any
+                        language, for any type of content.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/plugins/animated_headlines.js"></script>
     <script src="./js/functions.js"></script>
     <script src="./js/script.js"></script>
 </body>

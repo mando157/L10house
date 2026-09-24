@@ -1,1 +1,139 @@
-@use "./../abstracts/" as *; 
+@use "./../abstracts/" as *;
+
+header#Home {
+    height: 100svh;
+    @include flex();
+
+    >img {
+        @include position($b : 0, $l : 0);
+        width: 100%;
+        transform: rotate(180deg);
+    }
+
+    .part-1 {
+        @include flex($js :center, $al : start);
+        flex-direction: column;
+
+        h1 {
+            font-size: clamp(30px, 4.5vw, 60px);
+            color: $mainColor;
+        }
+
+        >p {
+            color: #555;
+            margin: 0px;
+            font-size: clamp(12px, 4.5vw, 16px);
+        }
+
+        .animated_headline h5 {
+            font-size: 20px;
+            font-size: clamp(16px, 4.5vw, 20px);
+
+            color: $secondaryColor;
+            font-weight: 500;
+            margin: 15px 0px;
+
+            @include responsive(350) {
+                margin: 8px 0px;
+            }
+
+            @include responsive(650) {
+                margin: 15px 0px;
+            }
+
+            span::after {
+                background-color: $secondaryColor;
+            }
+        }
+
+        .video {
+            a {
+                position: relative;
+                @include distance(45px, 45px);
+                border-radius: 50%;
+                @include flex();
+                transition-duration: .5s;
+
+                &::before {
+                    content: "";
+                    @include position($t : 50%, $l :50%);
+                    transform: translate(-50%, -50%);
+                    @include distance(0%, 0%);
+                    background-color: $mainColor;
+                    border-radius: 50%;
+                    transition-duration: .5s;
+
+                }
+
+                i {
+                    position: relative;
+                    @include position();
+                    color: $mainColor;
+                    transition-duration: .5s;
+                }
+
+                &:hover {
+                    &::before {
+                        @include distance(100%, 100%);
+                    }
+
+                    i {
+                        color: #fff;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .part-2 {
+        @include flex();
+
+        img {
+            transform: scale(1.1);
+
+            @include responsive(350) {
+                @include distance(200px);
+                display: block;
+                margin: auto;
+            }
+
+            @include responsive(450) {
+                @include distance(250px);
+            }
+
+            @include responsive(850) {
+                @include distance(450px);
+            }
+
+            @include responsive(1050) {
+                @include distance(80%);
+            }
+        }
+    }
+
+    >.down {
+        @include position($b : 80px);
+        @include distance(25px, 20px);
+
+        img {
+            @include position($t : 50% ,$l : 50%);
+            transform: translate(-50% ,-50%);
+            @include distance(25px, 20px);
+            cursor: pointer;
+        }
+
+        img:nth-of-type(1) {
+            position: relative;
+            animation: img 2s infinite;
+
+        }
+        img:nth-of-type(2) {
+            animation: img2 2s infinite;
+        }
+
+        img:nth-of-type(3) {
+            animation: img3 2s infinite;
+        }
+    }
+}

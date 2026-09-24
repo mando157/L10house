@@ -1,9 +1,40 @@
 @use "./../abstracts/" as *;
 
 nav.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    transition-duration: $duration;
+
     .navbar-brand {
         img {
             width: 140px;
+            transition-duration: $duration;
+
+
+            @include responsive(350) {
+                @include distance(80px);
+            }
+
+            @include responsive(850) {
+                @include distance(100px);
+            }
+        }
+    }
+
+    .navbar-toggler {
+        padding: 5px;
+        color: rgba(0, 0, 0, .6);
+        border-color: rgba(0, 0, 0, .6);
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        span {
+            i {
+                font-size: 25px;
+            }
         }
     }
 
@@ -20,8 +51,8 @@ nav.navbar {
 
                     &::after {
                         content: "";
-                        position: absolute;
                         display: block;
+                        position: absolute;
                         width: 0%;
                         height: 2px;
                         bottom: -8px;
@@ -36,28 +67,65 @@ nav.navbar {
                         width: 100%;
                     }
 
+                    @include responsive(350) {
+                        width: fit-content;
+                        margin: auto;
+                    }
+
                 }
 
                 .nav-link.dropdown-toggle {
-                    &::after{
+                    &::after {
                         content: "";
                         display: inline-block;
+                        top: 50%;
+                        bottom: 0;
+                        left: 100%;
+                        transform: translate(0px, -50%);
                         margin-left: .255em;
                         vertical-align: .255em;
                         border-top: .5em solid;
                         border-right: .5em solid transparent;
                         border-bottom: 0;
                         border-left: .5em solid transparent;
+                        color: $mainColor;
                         background-color: transparent;
-                        color :$secondaryColor;
                     }
 
-                    &:hover::after{
+                    &:hover::after {
                         width: initial;
-                        color: $mainColor;
+                        color: $secondaryColor;
                     }
                 }
             }
+
+            @include responsive(350) {
+                background-color: rgba(0, 0, 0, .6);
+                backdrop-filter: blur(10px);
+                width: 80%;
+                margin: auto;
+                padding: 15px;
+                border-radius: 5px;
+            }
+
+            @include responsive(1050) {
+                background-color: transparent;
+                backdrop-filter: blur(0px);
+                width: initial;
+                margin: 0px;
+                padding: 0px;
+                border-radius: 0px;
+            }
+        }
+    }
+}
+
+nav.navbar.scrolled {
+    background-color: #fff;
+
+    .navbar-brand {
+        img {
+            width: 100px;
         }
     }
 }
