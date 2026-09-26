@@ -614,7 +614,7 @@ header#Home > .down img:nth-of-type(3) {
   border-radius: 10px;
   height: 450px;
   background-color: #EE5E00;
-  max-width: 300px;
+  max-width: 330px;
   margin: auto;
 }
 #Why .box .item .content {
@@ -635,7 +635,7 @@ header#Home > .down img:nth-of-type(3) {
 #Why .box .item .content:hover {
   transform: translate(-10px, 10px);
 }
-#Why .box .item .content h3,
+#Why .box .item .content h4,
 #Why .box .item .content p {
   position: relative;
   color: #fff;
