@@ -1,0 +1,82 @@
+@use "./../abstracts/" as *;
+
+#Video {
+    position: relative;
+    background-image: url("../images/video-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+    @include flex($direction : column);
+
+    &::before {
+        content: "";
+        @include position($t : 0, $l : 0);
+        @include distance($w : 100%, $h : 100%);
+        background: radial-gradient(#68b703, #305d00);
+        opacity: .8;
+    }
+
+    .title {
+        position: relative;
+
+        h2 {
+            color: #fff;
+        }
+
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    button {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        width: fit-content;
+
+        i {
+            font-size: 70px;
+            color: #fff;
+            cursor: pointer;
+            transition-duration: $duration;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.popup[data-popup-name="video"] {
+    .video-popup {
+        @include position($t : 50% , $l : 50%);
+        transform: translate(-50% , -50%);
+
+        @include flex();
+        background-color: transparent;
+
+        iframe {
+            max-width: 800px;
+            max-height: 400px;
+            border-radius: 15px;
+
+            @include responsive(350) {
+                height: 200px;
+            }
+
+            @include responsive(450) {
+                height: 250px;
+            }
+
+            @include responsive(650) {
+                height: 300px;
+            }
+
+            @include responsive(850) {
+                height: 400px;
+            }
+        }
+    }
+}

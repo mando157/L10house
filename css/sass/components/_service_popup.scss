@@ -1,7 +1,6 @@
 @use "./../abstracts/" as *;
 
 .popup[data-popup-name="service"] {
-    display: none;
     .service {
         width: 80%;
         margin: 50px auto;

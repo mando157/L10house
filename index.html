@@ -169,14 +169,37 @@
             <div class="content row row-gap-4">
             </div>
         </div>
+
+        <!-- *    Video Section    * -->
+        <div id="Video">
+            <div class="title">
+                <h2>WATCH VIDEO</h2>
+            </div>
+            <button>
+                <i class="fa-brands fa-youtube" onclick="openPopup('video')"></i>
+            </button>
+        </div>
     </section>
 
-    closePopup('service')
+
+
+    <!-- *    Services Popup    * -->
     <div class="popup" data-popup-name="service" onclick="closePopup('service')">
         <div class="popup-element service">
-
         </div>
     </div>
+
+    <!-- *    Video Popup    * -->
+    <div class="popup" data-popup-name="video" onclick="closePopup('video')">
+        <div class="popup-element video-popup">
+            <iframe width="930" height="523" src="https://www.youtube.com/embed/BMLRFrmRbKQ"
+                title="Motion Graphics | Mister translation site" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
 
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/jquery.js"></script>

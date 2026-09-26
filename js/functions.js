@@ -26,7 +26,6 @@ let serviceData = null,
 
 async function servicesDate() {
     serviceData = await getData("services");
-    console.log(serviceData)
 
     serviceData.forEach(service => {
         $("#Services .content").append(serviceComponent(service, index));
@@ -35,13 +34,14 @@ async function servicesDate() {
 
 }
 
-
+// * Edit Description
 function editDescription(description) {
     let regex = /L10N House/gmi;
 
     return description.replace(regex, `<span class="fw-medium"><span class="mainColor">L10N</span> <span class="secondaryColor">House</span></span>`);
 }
 
+// * Service Component
 function serviceComponent(service, index) {
     return `
         <div class="box col-lg-6">
@@ -98,7 +98,7 @@ function createSections(serviceIndex) {
     sections.forEach(function (section) {
         item += `
             <div class="section">
-                <h5 class="mb-3">${section.title}:</h5>
+                <h5 class="mb-3">${section.title}</h5>
                 <ol>
                     ${createLi(section)}
                 </ol>
@@ -118,32 +118,16 @@ function createLi(section) {
     return li;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // * Get Date of sectors section
 async function sectorsDate() {
-            let sectorData = await getData("sectors");
+    let sectorData = await getData("sectors");
 
-        }
+}
 
 function openPopup(popupName) {
-            $(`.popup[data-popup-name='${popupName}'] `).fadeIn(500);
-        }
+    $(`.popup[data-popup-name='${popupName}'] `).fadeIn(500);
+}
 
 function closePopup(popupName) {
-            $(`.popup[data-popup-name='${popupName}'] `).fadeOut(500);
-        }
+    $(`.popup[data-popup-name='${popupName}'] `).fadeOut(500);
+}
