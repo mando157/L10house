@@ -1,0 +1,17 @@
+@use "./../abstracts/" as *;
+
+.popup {
+    @include position($p : fixed, $t : 0, $l : 0, $z : 1000);
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    overflow: auto;
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $secondaryColor;
+    }
+
+    .popup-element {
+        position: relative;
+        background-color: #fff;
+    }
+}

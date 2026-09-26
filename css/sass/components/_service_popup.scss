@@ -1,0 +1,60 @@
+@use "./../abstracts/" as *;
+
+.popup[data-popup-name="service"] {
+    display: none;
+    .service {
+        width: 80%;
+        margin: 50px auto;
+        border-radius: 10px;
+
+        .popup-title {
+            border-bottom: 1px solid #333;
+            @include flex();
+            color: #333;
+
+            h4 {
+                margin: 15px 0px;
+            }
+
+            i {
+                @include position($t : 15px, $r : 15px);
+                cursor: pointer;
+            }
+        }
+
+        .popup-content {
+            padding: 30px;
+
+            >h3 {
+                margin: 0px auto 40px;
+                width: fit-content;
+                color: $secondaryColor;
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            .row {
+                .part-2 {
+                    .image {
+                        img {
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+
+            .section {
+                ol {
+                    li {
+                        margin: 0px 0px 8px;
+                        &::marker {
+                            color: $secondaryColor;
+                            font-weight: bolder;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

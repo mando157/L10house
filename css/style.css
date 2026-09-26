@@ -52,6 +52,10 @@ body {
   color: #EE5E00;
 }
 
+p {
+  color: #555;
+}
+
 section {
   padding: 50px 0px;
 }
@@ -84,6 +88,20 @@ section:hover .title::after {
   transform: translateX(-50%);
   background-color: #EE5E00;
   transition-duration: 0.5s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #719F3D;
+  border: 1px solid #000;
+  border-radius: 3px;
 }
 
 nav.navbar {
@@ -387,6 +405,109 @@ header#Home > .down img:nth-of-type(2) {
 }
 header#Home > .down img:nth-of-type(3) {
   animation: img3 2s infinite;
+}
+
+#Services .content {
+  padding: 20px 0px;
+}
+#Services .content .box .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  transform: translateY(0px);
+  transition-duration: 0.5s;
+}
+#Services .content .box .item:hover {
+  background-color: #fff;
+  border-radius: 15px;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5019607843);
+}
+#Services .content .box .item .image {
+  width: 60px;
+  height: 60px;
+}
+#Services .content .box .item h3 {
+  font-size: 20px;
+}
+#Services .content .box .item p button {
+  background-color: transparent;
+  padding: 0px;
+  border: none;
+  color: #719F3D;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: initial;
+  bottom: initial;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  overflow: auto;
+}
+.popup::-webkit-scrollbar-thumb {
+  background-color: #EE5E00;
+}
+.popup .popup-element {
+  position: relative;
+  background-color: #fff;
+}
+
+.popup[data-popup-name=service] {
+  display: none;
+}
+.popup[data-popup-name=service] .service {
+  width: 80%;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+.popup[data-popup-name=service] .service .popup-title {
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #333;
+}
+.popup[data-popup-name=service] .service .popup-title h4 {
+  margin: 15px 0px;
+}
+.popup[data-popup-name=service] .service .popup-title i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: initial;
+  left: initial;
+  z-index: initial;
+  cursor: pointer;
+}
+.popup[data-popup-name=service] .service .popup-content {
+  padding: 30px;
+}
+.popup[data-popup-name=service] .service .popup-content > h3 {
+  margin: 0px auto 40px;
+  width: fit-content;
+  color: #EE5E00;
+  font-size: 25px;
+  font-weight: 700;
+}
+.popup[data-popup-name=service] .service .popup-content .row .part-2 .image img {
+  border-radius: 10px;
+}
+.popup[data-popup-name=service] .service .popup-content .section ol li {
+  margin: 0px 0px 8px;
+}
+.popup[data-popup-name=service] .service .popup-content .section ol li::marker {
+  color: #EE5E00;
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=style.css.map */

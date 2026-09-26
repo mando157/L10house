@@ -1,0 +1,44 @@
+@use "./../abstracts/" as *;
+
+#Services {
+    .content {
+        padding: 20px 0px;
+        
+        .box {
+            .item {
+                @include flex($direction : column);
+                text-align: center;
+                width: 90%;
+                margin: auto;
+                padding: 20px;
+                transform: translateY(0px);
+                transition-duration: $duration;
+
+                &:hover {
+                    background-color: #fff;
+                    border-radius: 15px;
+                    transform: translateY(-10px);
+                    box-shadow: 0 20px 50px #00000080;
+
+                }
+
+                .image {
+                    @include distance(60px, 60px);
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    button {
+                        background-color: transparent;
+                        padding: 0px;
+                        border: none;
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -16,6 +16,10 @@ body {
     color: $secondaryColor;
 }
 
+p{
+    color : $paragraphColor;
+}
+
 section {
     padding: 50px 0px;
 
@@ -45,4 +49,16 @@ section {
         background-color: $secondaryColor;
         transition-duration: $duration;
     }
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-thumb{
+    background-color: $mainColor;
+    border: 1px solid #000;
+    border-radius: 3px;
 }
