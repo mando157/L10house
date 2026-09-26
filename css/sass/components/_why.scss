@@ -1,0 +1,58 @@
+@use "./../abstracts/" as *;
+
+#Why {
+    .box {
+
+        .item {
+            border-radius: 10px;
+            height: 450px;
+            background-color: $secondaryColor ;
+            max-width: 300px;
+            margin: auto;
+
+            .content {
+                position: relative;
+                border-radius: 10px;
+                height: 100%;
+                padding: 20px;
+                @include flex($direction : column, $js : end, $al : start);
+                background-position: center;
+                background-size: cover;
+                overflow: hidden;
+                transform: translate(0px, 0px);
+                transition-duration: $duration;
+
+                &:hover {
+                    transform: translate(-10px, 10px);
+                }
+
+                h3,
+                p {
+                    position: relative;
+                    color: #fff;
+                }
+
+                &::before {
+                    content: "";
+                    @include distance(100%, 100%);
+                    @include position($t : 0, $l : 0);
+                    background: linear-gradient(to top, rgba(0, 0, 0, .8), transparent);
+
+                }
+
+            }
+        }
+
+        &:nth-of-type(1) .item .content {
+            background-image: url("../images/best.jpg");
+        }
+
+        &:nth-of-type(2) .item .content {
+            background-image: url("../images/solutions.jpg");
+        }
+
+        &:nth-of-type(3) .item .content {
+            background-image: url("../images/teamwork.jpg");
+        }
+    }
+}

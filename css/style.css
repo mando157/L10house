@@ -42,7 +42,6 @@ body {
   background: #8e9eab;
   background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
   background: linear-gradient(to right, #eef2f3, #8e9eab);
-  height: 5000px;
 }
 
 .mainColor {
@@ -609,6 +608,58 @@ header#Home > .down img:nth-of-type(3) {
 .popup[data-popup-name=service] .service .popup-content .section ol li::marker {
   color: #EE5E00;
   font-weight: bolder;
+}
+
+#Why .box .item {
+  border-radius: 10px;
+  height: 450px;
+  background-color: #EE5E00;
+  max-width: 300px;
+  margin: auto;
+}
+#Why .box .item .content {
+  position: relative;
+  border-radius: 10px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  transform: translate(0px, 0px);
+  transition-duration: 0.5s;
+}
+#Why .box .item .content:hover {
+  transform: translate(-10px, 10px);
+}
+#Why .box .item .content h3,
+#Why .box .item .content p {
+  position: relative;
+  color: #fff;
+}
+#Why .box .item .content::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: initial;
+  left: 0;
+  z-index: initial;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+#Why .box:nth-of-type(1) .item .content {
+  background-image: url("../images/best.jpg");
+}
+#Why .box:nth-of-type(2) .item .content {
+  background-image: url("../images/solutions.jpg");
+}
+#Why .box:nth-of-type(3) .item .content {
+  background-image: url("../images/teamwork.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
