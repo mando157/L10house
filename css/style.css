@@ -95,13 +95,52 @@ section:hover .title::after {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #8e9eab;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #719F3D;
   border: 1px solid #000;
   border-radius: 3px;
+}
+
+.top-button {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  z-index: 1000;
+  background-color: #719F3D;
+  padding: 10px 5px;
+  width: 80px;
+  border-radius: 10px 0px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  transform: translateX(70%);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.top-button:hover {
+  transform: translateX(0%);
+}
+.top-button.hide {
+  transform: translateX(100%);
+}
+.top-button .icon {
+  width: 30%;
+}
+.top-button .icon i {
+  color: #fff;
+  font-size: 14px;
+}
+.top-button .text p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
 }
 
 nav.navbar {
