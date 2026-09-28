@@ -1,22 +1,12 @@
 // * AJAX to Get Data
 async function getData(dataName) {
 
-    if (dataName == "services") {
-        const response = await $.ajax({
-            type: "GET",
-            url: "https://semicode.tech/api/v1/l10nhouse/services"
-        });
+    const response = await $.ajax({
+        type: "GET",
+        url: `https://semicode.tech/api/v1/l10nhouse/${dataName}`
+    });
 
-        return response;
-    }
-    else if (dataName == "sectors") {
-        const response = await $.ajax({
-            type: "GET",
-            url: "https://semicode.tech/api/v1/l10nhouse/sectors"
-        });
-
-        return response;
-    }
+    return response;
 }
 
 // * Get Date of services section
@@ -118,16 +108,75 @@ function createLi(section) {
     return li;
 }
 
+// * Get Date of Languages section
+async function languagesDate() {
+    let languageData = await getData("languages");
+
+    languageData.forEach(language => {
+        $(".languages").append(languagesPopupComponent(language));
+    });
+
+}
+
+function languagesPopupComponent(language) {
+    return `    
+        <div class="section">
+            <h4>${language.continent}</h4>
+            <ul class="list-unstyled">
+                ${createLanguageLiElement(language)}
+            </ul>
+        </div>
+        `
+}
+
+function createLanguageLiElement(language) {
+    let liEle = "";
+
+    language.languages.forEach(function (li) {
+        liEle += `
+            <li><i class="fa-regular fa-circle-dot"></i> <p>${li}</p></li>
+            `;
+    });
+
+    return liEle;
+}
+
 // * Get Date of sectors section
 async function sectorsDate() {
     let sectorData = await getData("sectors");
 
+    sectorData.forEach(function (sector) {
+        $(".popup[data-popup-name='sectors'] .content .row").append(sectorsPopupComponent(sector));
+    });
+}
+
+function sectorsPopupComponent(sector) {
+    return `
+        <div class="box col-lg-3">
+            <div class="item">
+                <img src="./images/sec/${sector.icon}" class="img-fluid" alt="sector">
+                <p>${sector.name}</p>
+            </div>
+        </div>
+    `
 }
 
 function openPopup(popupName) {
-    $(`.popup[data-popup-name='${popupName}'] `).fadeIn(500);
+    if (popupName == "languages") {
+        $(`.popup[data-popup-name='languages'] `).fadeIn(500);
+        $(".popup[data-popup-name='languages'] .languages").delay(1000).addClass("appear");
+
+    } else {
+        $(`.popup[data-popup-name='${popupName}'] `).fadeIn(500);
+    }
 }
 
 function closePopup(popupName) {
-    $(`.popup[data-popup-name='${popupName}'] `).fadeOut(500);
+    if (popupName == "languages") {
+        $(`.popup[data-popup-name='languages'] `).delay(500).fadeOut(500);
+        $(".popup[data-popup-name='languages'] .languages").removeClass("appear");
+
+    } else {
+        $(`.popup[data-popup-name='${popupName}'] `).fadeOut(500);
+    }
 }

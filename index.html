@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="css/plugins/animated_haedlines.css">
+    <link rel="stylesheet" href="css/plugins/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/plugins/owl.theme.default.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <title>L10house</title>
@@ -180,15 +182,16 @@
             </div>
         </div>
 
-        <!-- *    Video Section    * -->
-        <div id="Video">
-            <div class="title">
-                <h2>WATCH VIDEO</h2>
-            </div>
-            <button>
-                <i class="fa-brands fa-youtube" onclick="openPopup('video')"></i>
-            </button>
+    </section>
+
+    <!-- *    Video Section    * -->
+    <section id="Video">
+        <div class="title">
+            <h2>WATCH VIDEO</h2>
         </div>
+        <button>
+            <i class="fa-brands fa-youtube" onclick="openPopup('video')"></i>
+        </button>
     </section>
 
     <!-- *    Why Us Section    * -->
@@ -247,6 +250,44 @@
         </div>
     </section>
 
+    <!-- *    LANGUAGES & SECTORS Section    * -->
+    <section id="Languages">
+        <div class="container">
+            <div class="title">
+                <h2>LANGUAGES & SECTORS</h2>
+            </div>
+
+            <div class="content">
+                <button class="btn secondaryColor bg-body rounded-4" onclick="openPopup('sectors')">sectors</button>
+                <button class="btn secondaryColor bg-body rounded-4" onclick="openPopup('languages')">languages</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="Clients">
+        <div class="container">
+            <div class="title">
+                <h2>SATISFIED CLIENTS</h2>
+            </div>
+            <div class="content">
+                <div class="owl-carousel">
+                    <div><img src="./images/clients/ab.jpg" alt="ab"></div>
+                    <div><img src="./images/clients/amazon.png" alt="amazon"></div>
+                    <div><img src="./images/clients/dell.png" alt="dell"></div>
+                    <div><img src="./images/clients/discovery.png" alt="discovery"></div>
+                    <div><img src="./images/clients/hotel.png" alt="hotel"></div>
+                    <div><img src="./images/clients/kia.png" alt="kia"></div>
+                    <div><img src="./images/clients/olympus.jpg" alt="olympus"></div>
+                    <div><img src="./images/clients/pwc.png" alt="pwc"></div>
+                    <div><img src="./images/clients/Siem.png" alt="Siem"></div>
+                    <div><img src="./images/clients/tom.png" alt="tom"></div>
+                    <div><img src="./images/clients/wd.jpg" alt="wd"></div>
+                    <div><img src="./images/clients/zebra.png" alt="zebra"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- *    Services Popup    * -->
     <div class="popup" data-popup-name="service" onclick="closePopup('service')">
         <div class="popup-element service">
@@ -264,10 +305,32 @@
         </div>
     </div>
 
+    <!-- *    languages Popup    * -->
+    <div class="popup" data-popup-name="languages" onclick="closePopup('languages')">
+        <div class="popup-element languages">
+            <i class="fa-solid fa-square-xmark" onclick="closePopup('languages')"></i>
+        </div>
+    </div>
+
+    <!-- *    sectors Popup    * -->
+    <div class="popup" data-popup-name="sectors" onclick="closePopup('sectors')">
+        <div class="popup-element sectors">
+            <div class="popup-title">
+                <h4>sectors</h4>
+                <i class="fa-solid fa-xmark" onclick="closePopup('sectors')"></i>
+            </div>
+            <div class="content">
+                <div class="row px-3 py-4 row-gap-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/plugins/animated_headlines.js"></script>
+    <script src="./js/plugins/owl.carousel.min.js"></script>
     <script src="./js/functions.js"></script>
     <script src="./js/script.js"></script>
 </body>

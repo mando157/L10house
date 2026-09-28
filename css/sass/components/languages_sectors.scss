@@ -1,0 +1,164 @@
+@use "./../abstracts/" as *;
+
+// * LANGUAGES & SECTORS Section
+#Languages {
+    position: relative;
+    background-image: url("../images/youth.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+    @include flex($direction : column);
+
+    &::before {
+        content: "";
+        @include position($t : 0, $l : 0);
+        @include distance($w : 100%, $h : 100%);
+        background: radial-gradient(#68b703, #305d00);
+        opacity: .8;
+    }
+
+    .title {
+        position: relative;
+
+        h2 {
+            color: #fff;
+        }
+
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    .content {
+        position: relative;
+        width: 100%;
+        @include flex();
+        gap: 25px;
+
+        button {
+            transition: all .5s;
+            transform: translateY(0px);
+            padding: 10px 20px;
+
+            &:hover {
+                transform: translateY(-5px);
+                color: $secondaryColor;
+            }
+        }
+    }
+}
+
+// * language popup
+.popup[data-popup-name="languages"] {
+    .languages {
+        @include position($r : -100%);
+        padding: 30px;
+        width: 35%;
+        background-color: #fff;
+        margin: 0;
+        border-radius: 10px 0px 0px 10px;
+        transition-duration: 1s;
+
+        &.appear {
+            @include position($r : 0%);
+        }
+
+        .section {
+            &:nth-of-type(odd) {
+                color: $mainColor;
+            }
+
+            &:nth-of-type(even) {
+                color: $secondaryColor;
+            }
+
+            h4 {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    @include position($b : -5px);
+                    display: block;
+                    width: 80px;
+                    height: 3px;
+                    border-radius: 5px;
+                }
+            }
+
+            &:nth-child(even) h4::after {
+                background-color: $mainColor;
+            }
+
+            &:nth-child(odd) h4::after {
+                background-color: $secondaryColor;
+            }
+
+            li {
+                @include flex($js : start);
+                gap: 5px;
+
+                p {
+                    margin: 0;
+                    color: #000;
+                }
+            }
+        }
+
+        >i {
+            @include position($t : 10px, $r : 20px);
+            font-size: 20px;
+        }
+    }
+}
+
+// * sectors popup
+.popup[data-popup-name="sectors"] {
+    .sectors {
+        width: 1100px;
+        margin: 30px auto;
+        border-radius: 10px;
+
+        .popup-title {
+            border-bottom: 1px solid #333;
+            @include flex();
+            color: #333;
+
+            h4 {
+                margin: 10px 0px;
+                font-size: 18px;
+            }
+
+            i {
+                @include position($t : 15px, $r : 15px);
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            .box {
+                .item {
+                    border-radius: 10px;
+                    text-align: center;
+                    padding: 10px;
+                    background-color: rgb(235, 251, 238);
+
+                    img {
+                        width: 80px;
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        background-color: rgb(223, 238, 226);
+                        font-size: 12px;
+                        color: #000;
+                        font-weight: bold;
+                        margin: 0;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

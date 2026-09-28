@@ -70,3 +70,43 @@ $(".popup .popup-element").click(function (e) {
 });
 
 servicesDate();
+languagesDate();
+sectorsDate();
+
+// * owl.carousel.js
+
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        items: 5,
+        loop: true,
+        slideBy: 1,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        slideTransition: "linear",
+
+        responsive: {
+            0: {
+                items: 1
+            },
+
+            576: {
+                items: 2
+            },
+
+            768: {
+                items: 3
+            },
+
+            992: {
+                items: 4
+            },
+
+            1200: {
+                items: 5
+            }
+        }
+
+    });
+});
