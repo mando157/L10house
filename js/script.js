@@ -110,3 +110,18 @@ $(document).ready(function () {
 
     });
 });
+
+// * WOW
+wow = new WOW(
+    {
+        animateClass: 'animate__animated',
+    }
+)
+wow.init();
+
+// * Loading Page
+window.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        $(".loading").fadeOut(2000);
+    }, 500);
+});

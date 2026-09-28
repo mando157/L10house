@@ -146,3 +146,17 @@ section {
         }
     }
 }
+
+.loading {
+    @include position($p : fixed, $t : 0, $l : 0, $z :1100);
+    @include distance(100%, 100%);
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    @include flex();
+
+    .content {
+        width: fit-content;
+        img{
+            width: 150px;
+        }
+    }
+}

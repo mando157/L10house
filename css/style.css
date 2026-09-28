@@ -177,6 +177,28 @@ section:hover .title::after {
   background-color: #EE5E00 !important;
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  right: initial;
+  bottom: initial;
+  left: 0;
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.loading .content {
+  width: fit-content;
+}
+.loading .content img {
+  width: 150px;
+}
+
 nav.navbar {
   position: fixed;
   width: 100%;
@@ -903,6 +925,109 @@ header#Home > .down img:nth-of-type(3) {
   font-weight: bold;
   margin: 0;
   padding: 5px;
+}
+
+#Contact {
+  position: relative;
+  background-image: url("../images/contact-bg.png");
+  background-position: center;
+  background-size: cover;
+}
+#Contact .title {
+  position: relative;
+}
+#Contact .title h2 {
+  color: #fff;
+}
+#Contact .title::after {
+  background-color: #fff;
+}
+#Contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: initial;
+  left: 0;
+  z-index: initial;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#68b703, #305d00);
+  opacity: 0.8;
+}
+#Contact .container > p {
+  position: relative;
+}
+#Contact .content {
+  position: relative;
+  margin: 0px 15px;
+}
+#Contact .content .part-1 form,
+#Contact .content .part-2 .item {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  /* 350 */
+}
+@media (max-width: 1300px) {
+  #Contact .content .part-1 form,
+  #Contact .content .part-2 .item {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+#Contact .content .part-1 form,
+#Contact .content .part-2 .item {
+  /* 850 */
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  #Contact .content .part-1 form,
+  #Contact .content .part-2 .item {
+    max-width: initial;
+    margin: 0;
+  }
+}
+#Contact .content .part-1 button {
+  background-color: #EE5E00;
+  color: #fff;
+  padding: 10px 20px;
+}
+#Contact .content .part-2 .item {
+  height: 100%;
+}
+#Contact .content .part-2 .item .box {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: row;
+  gap: 10px;
+}
+#Contact .content .part-2 .item .box .icon i {
+  color: #EE5E00;
+  font-size: 20px;
+}
+#Contact .content .part-2 .item .box a i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 50%;
+  color: #fff;
+}
+#Contact .content .part-2 .item .box a .facebook {
+  background-color: #0045B5;
+}
+#Contact .content .part-2 .item .box a .instagram {
+  background-color: #C52661;
+}
+#Contact .content .part-2 .item .box a .youtube {
+  background-color: #F70000;
+}
+
+footer {
+  background-color: #333;
 }
 
 /*# sourceMappingURL=style.css.map */

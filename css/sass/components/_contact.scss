@@ -1,0 +1,106 @@
+@use "./../abstracts/" as *;
+
+#Contact {
+    position: relative;
+    background-image: url("../images/contact-bg.png");
+    background-position: center;
+    background-size: cover;
+
+    .title {
+        position: relative;
+
+        h2 {
+            color: #fff;
+        }
+
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    &::before {
+        content: "";
+        @include position($t : 0, $l : 0);
+        @include distance($w : 100%, $h : 100%);
+        background: radial-gradient(#68b703, #305d00);
+        opacity: .8;
+    }
+
+    .container {
+        >p {
+            position: relative;
+        }
+    }
+
+    .content {
+        position: relative;
+        margin: 0px 15px;
+
+        .part-1 form,
+        .part-2 .item {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+
+            @include responsive(350) {
+                max-width: 400px;
+                margin: auto;
+            }
+
+            @include responsive(850) {
+                max-width: initial;
+                margin: 0;
+            }
+        }
+
+        .part-1 {
+            button {
+                background-color: $secondaryColor;
+                color: #fff;
+                padding: 10px 20px;
+            }
+        }
+
+        .part-2 {
+            .item {
+                height: 100%;
+
+                .box {
+                    @include flex($js : start, $al : start);
+                    gap: 10px;
+
+                    .icon i {
+                        color: $secondaryColor;
+                        font-size: 20px;
+                    }
+
+                    a {
+                        i {
+                            width: 40px;
+                            height: 40px;
+                            @include flex();
+                            border-radius: 50%;
+                            color: #fff;
+                        }
+
+                        .facebook {
+                            background-color: #0045B5;
+                        }
+
+                        .instagram {
+                            background-color: #C52661;
+                        }
+
+                        .youtube {
+                            background-color: #F70000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #333;
+}

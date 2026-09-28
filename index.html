@@ -19,15 +19,29 @@
     <link rel="icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+
     <link rel="stylesheet" href="css/plugins/animated_haedlines.css">
+
+    <link rel="stylesheet" href="css/plugins/animate.min.css">
+    <link rel="stylesheet" href="css/plugins/animate.css">
+
     <link rel="stylesheet" href="css/plugins/owl.carousel.min.css">
     <link rel="stylesheet" href="css/plugins/owl.theme.default.css">
+
     <link rel="stylesheet" href="./css/style.css">
 
     <title>L10house</title>
 </head>
 
 <body>
+    <!-- ! Loading Page ! -->
+    <div class="loading">
+        <div class="content">
+            <img src="./images/logo.png" class="wow animate__heartBeat animate__slower animate__infinite" alt="logo">
+        </div>
+    </div>
+
+
     <!-- ! To Top Button ! -->
     <div class="top-button hide">
         <div class="icon">
@@ -97,7 +111,7 @@
         <img src="./images/wavesOpacity.svg" alt="wavesOpacity">
         <div class="container">
             <div class="row">
-                <div class="part-1 col-12 col-md-6 col-lg-6">
+                <div class="part-1 col-12 col-md-6 col-lg-6 wow animate__slideInLeft animate__delay-1s">
                     <h1>L10N House</h1>
                     <p>will help you communicate your message</p>
 
@@ -117,7 +131,7 @@
                         <p class="fw-medium mb-0">Play Video</p>
                     </div>
                 </div>
-                <div class="part-2 col-12 col-md-6 col-lg-6">
+                <div class="part-2 col-12 col-md-6 col-lg-6 wow animate__zoomInDown animate__delay-1s">
                     <div class="image">
                         <img src="./images/globe-png-39540.png" class="img-fluid" alt="globe">
                     </div>
@@ -135,16 +149,16 @@
     <!-- *    About Us Section    * -->
     <section id="About" class="bg-body">
         <div class="container">
-            <div class="title">
+            <div class="title wow animate__bounceIn">
                 <h2>ABOUT US</h2>
             </div>
             <div class="row row-gap-4">
-                <div class="part-1 col-10 col-lg-5 mx-auto">
+                <div class="part-1 col-10 col-lg-5 mx-auto wow animate__lightSpeedInLeft">
                     <div class="image">
                         <img src="./images/about.png" class="img-fluid rounded-3" alt="about">
                     </div>
                 </div>
-                <div class="part-2 col-10 col-lg-7 mx-auto d-flex align-items-center">
+                <div class="part-2 col-10 col-lg-7 mx-auto d-flex align-items-center wow animate__lightSpeedInRight">
                     <p>
                         Located in the heart of dynamic Egypt, <span class="fw-medium"><span
                                 class="mainColor">L10N</span> <span class="secondaryColor">House</span></span> is a
@@ -175,7 +189,7 @@
     <!-- *    Services Section    * -->
     <section id="Services">
         <div class="container">
-            <div class="title">
+            <div class="title wow animate__bounceIn">
                 <h2>Services</h2>
             </div>
             <div class="content row row-gap-4">
@@ -186,7 +200,7 @@
 
     <!-- *    Video Section    * -->
     <section id="Video">
-        <div class="title">
+        <div class="title wow animate__bounceIn">
             <h2>WATCH VIDEO</h2>
         </div>
         <button>
@@ -197,12 +211,12 @@
     <!-- *    Why Us Section    * -->
     <section id="Why">
         <div class="container">
-            <div class="title">
+            <div class="title wow animate__bounceIn">
                 <h2>Why Us?</h2>
             </div>
             <div class="row row-gap-4">
                 <div class="box col-11 col-md-6 col-lg-4 mx-auto">
-                    <div class="item">
+                    <div class="item wow animate__flipInY">
                         <div class="content">
                             <h4 class="fw-bold">The Best</h4>
                             <p>
@@ -216,7 +230,7 @@
                     </div>
                 </div>
                 <div class="box col-11 col-md-6 col-lg-4 mx-auto">
-                    <div class="item">
+                    <div class="item wow animate__flipInY">
                         <div class="content">
                             <h4 class="fw-bold">Solutions for all your language challenges</h4>
                             <p>
@@ -233,7 +247,7 @@
                     </div>
                 </div>
                 <div class="box col-11 col-md-6 col-lg-4 mx-auto">
-                    <div class="item">
+                    <div class="item wow animate__flipInY">
                         <div class="content">
                             <h4 class="fw-bold">Our highly qualified teams</h4>
                             <p>
@@ -251,22 +265,25 @@
     </section>
 
     <!-- *    LANGUAGES & SECTORS Section    * -->
-    <section id="Languages">
+    <section id="Languages" class="overflow-hidden">
         <div class="container">
-            <div class="title">
+            <div class="title wow animate__bounceIn">
                 <h2>LANGUAGES & SECTORS</h2>
             </div>
 
             <div class="content">
-                <button class="btn secondaryColor bg-body rounded-4" onclick="openPopup('sectors')">sectors</button>
-                <button class="btn secondaryColor bg-body rounded-4" onclick="openPopup('languages')">languages</button>
+                <button class="btn secondaryColor bg-body rounded-4 wow animate__bounceInUp"
+                    onclick="openPopup('sectors')">sectors</button>
+                <button class="btn secondaryColor bg-body rounded-4 wow animate__bounceInUp"
+                    onclick="openPopup('languages')">languages</button>
             </div>
         </div>
     </section>
 
+    <!-- *    Clients Section    * -->
     <section id="Clients">
         <div class="container">
-            <div class="title">
+            <div class="title wow animate__bounceIn">
                 <h2>SATISFIED CLIENTS</h2>
             </div>
             <div class="content">
@@ -287,6 +304,112 @@
             </div>
         </div>
     </section>
+
+    <!-- *    Clients Section    * -->
+    <section id="Contact">
+        <div class="container">
+            <div class="title wow animate__bounceIn mb-4">
+                <h2>GET IN TOUCH</h2>
+            </div>
+            <p class="text-white text-center">For More information, please do not hesitate to contact us.</p>
+
+            <div class="content mt-5">
+                <div class="row row-gap-4">
+                    <div class="part-1 col-md-6">
+                        <form class="wow animate__bounceInLeft">
+                            <div class="row">
+                                <div class="col-lg-6 mb-3">
+                                    <div class="item">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Full Name*"
+                                                autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <div class="item">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Email Address*"
+                                                autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <div class="item">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Phone Number*"
+                                                autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <div class="item">
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Your Message..." cols="30"
+                                                rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="item">
+                                        <div class="form-group">
+                                            <button class="btn">Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="part-2 col-md-6">
+                        <div class="item wow animate__bounceInRight"
+                            style="visibility: visible; animation-name: bounceInRight;">
+                            <div class="item-conten">
+                                <div class="box mb-4">
+                                    <div class="icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="details">
+                                        <h6 class="m-0 text-black fw-medium">Address</h6>
+                                        <p class="m-0">178 Sameh Gado St. 6th October City, Giza, Egypt.</p>
+                                    </div>
+                                </div>
+                                <div class="box mb-4">
+                                    <div class="icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="details">
+                                        <h6 class="m-0 text-black fw-medium">Phone</h6>
+                                        <p class="m-0">(+202) 3825 0102 | (+202) 3825 0105</p>
+                                    </div>
+                                </div>
+                                <div class="box mb-4">
+                                    <div class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="details">
+                                        <h6 class="m-0 text-black fw-medium">E-mail</h6>
+                                        <p class="m-0">info@l10nhouse.com</p>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <a href="#"><i class="fab fa-facebook-f facebook"></i></a>
+                                    <a href="#"><i class="fab fa-instagram instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- *    Footer Popup    * -->
+    <footer class="py-2 text-center">
+        <p class="m-0 text-light">&copy; 2021 <span class="secondaryColor fw-bold">SemiCode</span>, Ltd. | All Rights
+            Reserved .</p>
+    </footer>
 
     <!-- *    Services Popup    * -->
     <div class="popup" data-popup-name="service" onclick="closePopup('service')">
@@ -330,6 +453,7 @@
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/plugins/animated_headlines.js"></script>
+    <script src="./js/plugins/wow.min.js"></script>
     <script src="./js/plugins/owl.carousel.min.js"></script>
     <script src="./js/functions.js"></script>
     <script src="./js/script.js"></script>

@@ -35,7 +35,7 @@ function editDescription(description) {
 function serviceComponent(service, index) {
     return `
         <div class="box col-lg-6">
-            <div class="item">
+            <div class="item wow ${(index % 2 == 0) ? "animate__backInLeft" : "animate__backInRight"}">
                 <div class="image">
                     <img src="./images/${service.icon}" class="img-fluid" alt="service">
                 </div>
@@ -90,7 +90,7 @@ function createSections(serviceIndex) {
             <div class="section">
                 <h5 class="mb-3">${section.title}</h5>
                 <ol>
-                    ${createLi(section)}
+                    ${createSectionLi(section)}
                 </ol>
             </div>
         `
@@ -98,7 +98,7 @@ function createSections(serviceIndex) {
     return item;
 }
 
-function createLi(section) {
+function createSectionLi(section) {
     let li = "";
 
     section.points.forEach(function (point) {
