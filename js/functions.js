@@ -152,7 +152,7 @@ async function sectorsDate() {
 
 function sectorsPopupComponent(sector) {
     return `
-        <div class="box col-lg-3">
+        <div class="box col-10 col-sm-6 col-md-4 col-lg-3 mx-auto">
             <div class="item">
                 <img src="./images/sec/${sector.icon}" class="img-fluid" alt="sector">
                 <p>${sector.name}</p>
@@ -175,7 +175,7 @@ function openPopup(popupName) {
 
 function closePopup(popupName) {
     $("body").css("overflow-y" , "");
-    
+
     if (popupName == "languages") {
         $(`.popup[data-popup-name='languages'] `).delay(500).fadeOut(500);
         $(".popup[data-popup-name='languages'] .languages").removeClass("appear");
