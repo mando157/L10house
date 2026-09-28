@@ -11,7 +11,6 @@ window.addEventListener("scroll", function () {
     }
 
     // * To Top
-
     let homeSection = document.querySelector("#Home"),
         homeHeight = homeSection.offsetHeight;
 
@@ -120,8 +119,19 @@ wow = new WOW(
 wow.init();
 
 // * Loading Page
+
+$("body").css("overflow-y", "hidden");
+
 window.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         $(".loading").fadeOut(2000);
+        $("body").css("overflow-y", "");
     }, 500);
 });
+
+// * About Us Button
+$(".down").click(function () {
+    let $aboutSection = $("#About").offset().top;
+    $(window).scrollTop($aboutSection - $(navbar).outerHeight());
+});
+

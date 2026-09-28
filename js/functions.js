@@ -162,6 +162,8 @@ function sectorsPopupComponent(sector) {
 }
 
 function openPopup(popupName) {
+    $("body").css("overflow-y" , "hidden");
+
     if (popupName == "languages") {
         $(`.popup[data-popup-name='languages'] `).fadeIn(500);
         $(".popup[data-popup-name='languages'] .languages").delay(1000).addClass("appear");
@@ -172,6 +174,8 @@ function openPopup(popupName) {
 }
 
 function closePopup(popupName) {
+    $("body").css("overflow-y" , "");
+    
     if (popupName == "languages") {
         $(`.popup[data-popup-name='languages'] `).delay(500).fadeOut(500);
         $(".popup[data-popup-name='languages'] .languages").removeClass("appear");
